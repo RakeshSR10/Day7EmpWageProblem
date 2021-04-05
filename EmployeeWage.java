@@ -9,23 +9,13 @@ public class EmployeeWage
 	public static final int NUM_OF_WORKING_DAYS = 20;
 	public static final int MAX_HRS_IN_MONTH = 100;
 
-	public static void main(String[] args) 
+	
+	public static int computeEmpWage()
 	{
+		//Variables
+		int empHrs=0, totalEmpWage=0, totalEmpHrs=0, totalWorkingDays=0;
 
-		 //Variables
-                int empHrs=0, totalEmpWage=0, totalEmpHrs=0, totalWorkingDays=0;
-
-		/* Computation
-		double empCheck = Math.floor(Math.random() *10)%2;
-		if(empCheck == IS_FULL_TIME)
-			System.out.println("Employee is Present");
-		else
-			System.out.println("Employee is Absent");*/
-
-		//Computation and full time, part time
-				//Computation using switch
-		//Computation with switch and for loop
-				//Computation and total working days per month
+		//Computation 
 		while(totalEmpHrs < MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
 		{
 			totalWorkingDays++;	
@@ -47,6 +37,24 @@ public class EmployeeWage
 		}
 		totalEmpWage = totalEmpHrs * NUM_OF_WORKING_DAYS;
 		System.out.println("Total Employee Wage = "+totalEmpWage);
+		return totalEmpWage;
+	}
+
+	public static void main(String[] args) 
+	{
+
+         	/* Computation
+		double empCheck = Math.floor(Math.random() *10)%2;
+		if(empCheck == IS_FULL_TIME)
+			System.out.println("Employee is Present");
+		else
+			System.out.println("Employee is Absent");*/
+
+		//Computation and full time, part time
+				//Computation using switch
+		//Computation with switch and for loop
+				//Computation and total working days per month
+		computeEmpWage();
 	}
 
 }
